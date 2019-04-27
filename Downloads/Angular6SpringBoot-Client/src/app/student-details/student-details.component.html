@@ -1,0 +1,16 @@
+<div *ngIf="student">
+  <div>
+    <label>Name: </label> {{student.name}}
+  </div>
+  <div>
+    <label>Level: </label> {{student.level}}
+  </div>
+
+  <span class="button is-small btn-primary" *ngIf='student.active' (click)='updateActive(false)'>Inactive</span>
+
+  <span class="button is-small btn-primary" *ngIf='!student.active' (click)='updateActive(true)'>Active</span>
+
+  <span class="button is-small btn-danger" (click)='deleteStudent()'>Delete</span>
+
+  <hr/>
+</div>
